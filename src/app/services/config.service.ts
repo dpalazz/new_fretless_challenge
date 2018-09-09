@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-export interface Config {
-  tweetListURL: string;
-}
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
-  public configUrl = '../../assets/config.json';
-  
+  public configUrl = 'https://secure-fortress-85993.herokuapp.com/tweets';
+
   constructor(private http: HttpClient) { }
 
   getConfig() {
-    return this.http.get<Config>(this.configUrl);
+    return this.http.get(this.configUrl).pipe(map(data => data));
   }
 }
