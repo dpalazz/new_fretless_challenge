@@ -7,10 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TweetComponent implements OnInit {
   @Input() public tweetList;
-  
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }
