@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ConfigService } from '../services/config.service';
 
@@ -7,10 +7,12 @@ import { ConfigService } from '../services/config.service';
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css']
 })
-export class TimelineComponent {
+export class TimelineComponent implements OnInit {
   public tweetList: Object;
 
-  constructor(private configService: ConfigService) {
+  constructor(private configService: ConfigService) { }
+
+  ngOnInit() {
     this.getTweetListData();
   }
 
