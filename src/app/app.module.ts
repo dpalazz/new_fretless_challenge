@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TweetComponent } from './tweet/tweet.component';
-import { HttpClient } from 'selenium-webdriver/http';
 
 @NgModule({
   declarations: [
